@@ -1,0 +1,31 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 17, in script call
+    call chose_action
+  File "game/script.rpy", line 36, in script
+    $ txt = Item(cr1).craft()
+  File "game/script.rpy", line 36, in <module>
+    $ txt = Item(cr1).craft()
+NameError: global name 'session' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 17, in script call
+    call chose_action
+  File "game/script.rpy", line 36, in script
+    $ txt = Item(cr1).craft()
+  File "F:\Development\RenPy\renpy-6.15.7-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "F:\Development\RenPy\renpy-6.15.7-sdk\renpy\python.py", line 1448, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 36, in <module>
+    $ txt = Item(cr1).craft()
+  File "F:\Development\RenPy\OW WildHuntLand/game\scripts\whl_engine.py", line 144, in craft
+    session.hero.possessions.append(self)
+NameError: global name 'session' is not defined
+
+Windows-7-6.1.7601-SP1
+Ren'Py 6.99.4.467
+MER Prototype 0.1
